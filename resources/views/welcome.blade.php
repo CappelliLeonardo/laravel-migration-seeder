@@ -3,11 +3,43 @@
 @section('page-title', 'Home')
 
 @section('main-content')
-<h1>
-    Laravel Start 1
-</h1>
+ 
+<ul>
+    @foreach($trains as $index => $train)
+    <ul>
+        <li>
+            {{ $train->id }}
+        </li>
+        <li>
+            {{ $train->company }}
+        </li>
+        <li>
+            {{ $train->departure_station }}
+        </li>
+        <li>
+            {{ $train->arrival_station}}
+        </li>
+        <li>
+            {{ $train->departure_time}}
+        </li>
+        <li>
+            {{ $train->arrival_time}}
+        </li>
+        <li>
+            {{ $train->train_code}} 
+        </li>
+        <li>
+            {{ $train->carriages_number}} 
+        </li>
+        <li>
+            {{ $train->on_Time}} 
+        </li>
+        <li>
+            {{ $train->deleted}} 
+        </li>
+    </ul>
 
-<h2>
-    Ciao {{ $firstName }} {{ $lastName }}
-</h2>
+    
+    @endforeach
+</ul>
 @endsection
