@@ -3,8 +3,7 @@
 @section('page-title', 'Home')
 
 @section('main-content')
- 
-<ul>
+
     @foreach($trains as $index => $train)
     <ul>
         <li>
@@ -38,8 +37,5 @@
             {{ $train->deleted}} 
         </li>
     </ul>
-
-    
     @endforeach
-</ul>
 @endsection
