@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('arrival_station', 64);
             $table->dateTime('departure_time');
             $table->dateTime('arrival_time');
-            $table->tinyInteger('train_code', 10);
+            $table->integer('train_code');
             $table->tinyInteger('carriages_number')->nullable();
             $table->boolean('on_time')->default(true);
             $table->boolean('deleted')->default(false);
